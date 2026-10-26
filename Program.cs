@@ -28,7 +28,7 @@ while (!guessedCorrectly)
     {
         guessedCorrectly = true;
         Console.WriteLine("Congratulations! You guessed the correct number!");
-        Console.WriteLine($"Random Nymber generated was: {secretNumber}");
+        Console.WriteLine($"Random Number generated was: {secretNumber}");
         Console.WriteLine($"It took you {attempts} attempts to guess the number.");
         guessedCorrectly = true;
     }
