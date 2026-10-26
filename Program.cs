@@ -25,6 +25,7 @@ while (!guessedCorrectly)
     {
         guessedCorrectly = true;
         Console.WriteLine("Congratulations! You guessed the correct number!");
+        Console.WriteLine($"Random Nymber generated was: {secretNumber}");
         Console.WriteLine($"It took you {attempts} attempts to guess the number.");
         guessedCorrectly = true;
     }
@@ -41,3 +42,5 @@ while (!guessedCorrectly)
         Console.WriteLine("Invalid input. Please enter a number between 1 and 10.");
     }
 }
+
+Console.WriteLine();
