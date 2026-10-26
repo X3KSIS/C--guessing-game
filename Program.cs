@@ -10,16 +10,19 @@ Console.WriteLine();
 Random random = new Random();
 int secretNumber = random.Next(1, 11);
 
-//Console.Write("Guess a number between 1 and 10: ");
-//int guess = int.Parse(Console.ReadLine() ?? "0");
-
-
 int attempts = 0;
 bool guessedCorrectly = false;
 while (!guessedCorrectly)
 {
     Console.Write("Guess: ");
-    int guess = int.Parse(Console.ReadLine() ?? "0");
+    string input = Console.ReadLine() ?? "";
+    if(!int.TryParse(input, out int guess))
+    {
+        Console.WriteLine("Invalid input. Please enter a valid number.");
+        continue;
+    }
+    
+    
     attempts++;
     if (guess == secretNumber)
     {
@@ -36,10 +39,6 @@ while (!guessedCorrectly)
     else if (guess > secretNumber)
     {
         Console.WriteLine("Your guess is too high.");
-    }
-    else
-    {
-        Console.WriteLine("Invalid input. Please enter a number between 1 and 10.");
     }
 }
 
