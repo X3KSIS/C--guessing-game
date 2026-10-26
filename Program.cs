@@ -25,13 +25,19 @@ while (!guessedCorrectly)
     {
         guessedCorrectly = true;
         Console.WriteLine("Congratulations! You guessed the correct number!");
+        Console.WriteLine($"It took you {attempts} attempts to guess the number.");
+        guessedCorrectly = true;
     }
     else if (guess < secretNumber)
     {
         Console.WriteLine("Your guess is too low.");
     }
-    else
+    else if (guess > secretNumber)
     {
         Console.WriteLine("Your guess is too high.");
+    }
+    else
+    {
+        Console.WriteLine("Invalid input. Please enter a number between 1 and 10.");
     }
 }
